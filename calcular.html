@@ -17,6 +17,7 @@
         <h1 class="nome">Arthur Manzatto de Carvalho Silva</h1>
         <h1 class="nome">Eduardo Scudeler Rocha</h1>
         <h1 class="nome">Lucas Cirino</h1>
+        <h1 class="nome">Marcos</h1>
       </div>
       <div class="meio">
 
@@ -32,22 +33,24 @@
   </div>
   <div class="componentes">
     <h2 class="titulo3">INSIRA OS NÚMEROS ( SEPARADO POR VÍRGULAS )</h2>
-    <textarea class="form-control" placeholder="Insira os numeros aqui" id="floatingTextarea2" style="height: 100px"></textarea>
+    <textarea class="form-control" id="numbers" placeholder="Insira os numeros aqui" id="floatingTextarea2" style="height: 100px"></textarea>
     </div>
   </div>
   <div class="d-grid gap-2 col-6 mx-auto footerzada " style="padding: 20px;">
-  <button class="botao2">CALCULAR</button>
+  <button class="botao2" onclick="calcular()">CALCULAR</button>
   </div>
   <div class="componentes2">
     <h2 class="titulo3">MÉDIA:</h1>
-    <div class="resultado"></div>
-    <h2 class="titulo3">MODA:</h1>
-    <div class="resultado"></div>
+    <div class="resultado" id="media"></div>
+    <h2 class="titulo3" >MODA:</h1>
+    <div class="resultado" id="moda"></div>
     <h2 class="titulo3">MEDIANA:</h1>
-    <div class="resultado"></div> 
+    <div class="resultado" id="mediana"></div> 
   </div>
   <div class="d-grid gap-2 col-6 mx-auto footerzada ">
-  <button class="botao2">LIMPAR</button>
+  <button class="botao2" onclick="limpar()">LIMPAR</button>
   </div>
 </body>
+
+<script src="script.js"></script>
 </html>

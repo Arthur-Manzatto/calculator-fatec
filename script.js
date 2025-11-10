@@ -1,8 +1,9 @@
+var labelMedia = document.getElementById("media");
+var labelMediana = document.getElementById("mediana");
+var labelModa = document.getElementById("moda");
+
 function calcular(){
 
-    let labelMedia = document.getElementById("media");
-    let labelMediana = document.getElementById("mediana");
-    let labelModa = document.getElementById("moda");
 
     let input = document.getElementById("numbers").value.toString().replaceAll(' ','');
     
@@ -28,7 +29,7 @@ function media(numbers){
     iDivisor = numbers.length;
     fMedia = fTotal/iDivisor;
 
-    return "Média: " + fMedia;
+    return fMedia.toFixed(2);
     
 }
 function mediana(numbers){
@@ -44,10 +45,10 @@ function mediana(numbers){
 
         let middle1 = numbers[iMeio - 1];
         let middle2 = numbers[iMeio];
-        return "Mediana: " + ((middle1 + middle2) / 2);
+        return ((middle1 + middle2) / 2).toFixed(2);
     } else {
 
-        return "Mediana: " + numbers[iMeio];
+        return numbers[iMeio].toFixed(2);
     }
 
 
@@ -72,6 +73,18 @@ function moda(numbers){
         }
     }
 
-    return "Moda: " + moda;
+    return moda.toFixed(2);
 }
 
+function paginaCalcular(){
+    window.location.href = "calcular.html"; 
+
+}
+
+function limpar(){
+    labelMedia.innerText = "";
+    labelMediana.innerText = "";
+    labelModa.innerText = "";
+
+    document.getElementById("numbers").value = "";
+}
