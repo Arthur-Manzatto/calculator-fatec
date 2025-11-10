@@ -53,5 +53,25 @@ function mediana(numbers){
 
 }
 function moda(numbers){
-    
+    numbers.sort((a, b) => a - b);
+
+    let contagem = 1;
+    let maxContagem = 1;
+    let moda = numbers[0];
+
+    for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] === numbers[i - 1]) {
+            contagem++;
+        } else {
+            contagem = 1;
+        }
+
+        if (contagem > maxContagem) {
+            maxContagem = contagem;
+            moda = numbers[i];
+        }
+    }
+
+    return "Moda: " + moda;
 }
+
