@@ -88,3 +88,7 @@ function limpar(){
 
     document.getElementById("numbers").value = "";
 }
+
+function voltar(){
+    window.location.href = "index.html"; 
+}
