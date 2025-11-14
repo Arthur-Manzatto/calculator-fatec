@@ -91,6 +91,7 @@ function limpar(){
 
 function voltar(){
     window.location.href = "index.html"; 
+<<<<<<< HEAD
 }
 
 document.getElementById("numbers").addEventListener('input', function(event) {
@@ -101,3 +102,6 @@ document.getElementById("numbers").addEventListener('input', function(event) {
 
     event.target.value = value;
 });
+=======
+}
+>>>>>>> 8b84f30fc6f5b76e126446a9aa6f7d5ef4a1e07c
